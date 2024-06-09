@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal Popup</title>
+</head>
+<body>
+<button id="show-btn">Mostrar popup</button>
+<dialog id="modal">
+  <h2>POPUP</h2>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui est ipsum, dolore eligendi incidunt consequatur dolorem ipsa ducimus quae debitis molestiae quos beatae enim, accusantium eaque quod aut sapiente animi totam maiores aliquid repellat molestias minima fuga? Non, maxime at!</p>
+  <p><button id="close-btn">Close popup</button></p>
+</dialog>
+<script>
+  const showBtn = document.getElementById('show-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const modal = document.getElementById('modal');
+
+  showBtn.addEventListener('click', () => {
+    modal.showModal();
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.close();
+  });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vowel Counter</title>
+</head>
+<body>
+  <input type="text" name="word" id="word">
+  <button id="check-btn">Check</button>
+  <script>
+    const checkBtn = document.getElementById("check-btn");
+    const vowelsList = ['a','e','i','o','u'];
+
+    checkBtn.addEventListener('click', () => {
+      const word = document.getElementById("word").value.toLowerCase();
+      const letters = word.split('');
+      let vowelCounter = 0;
+
+      for (let letter of letters) {
+        if (vowelsList.includes(letter)) {
+          vowelCounter++;
+        }
+      }
+      alert(vowelCounter);
+
+    })
+  </script>
+</body>
+</html>

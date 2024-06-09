@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome checkered</title>
+</head>
+<body>
+  <input id="word" type="text">
+  <button id="check-btn">Checar</button>  
+
+  <script>
+    const checkBtn = document.getElementById("check-btn");
+
+    function isPalindrome(word) {
+      let arr = word.split('');
+      let invertedWord = '';
+      
+      for (let i = word.length - 1; i >= 0; i--){
+        invertedWord +=  arr[i];  
+      }
+
+      if (word === invertedWord) {
+        console.log(`It's a palindrome!`);
+      } else {
+        console.log('It is NOT a palindrome');
+      }
+    }
+
+    checkBtn.addEventListener('click', ()=>{
+      const word = document.getElementById("word").value;
+      isPalindrome(word);
+    });
+  </script>
+</body>
+</html>
